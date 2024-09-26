@@ -1,0 +1,302 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Ubuntu', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+
+header {
+    background-color: #3d3d3d;
+    padding: 0;
+    width: 100%; 
+}
+
+.carousel-inner img {
+    width: 100%;
+    height: auto;
+    max-height: 300px; 
+    object-fit: cover;
+}
+
+
+nav {
+    background-color: #222;
+    padding: 10px 20px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 8px 15px;
+    transition: background-color 0.3s;
+}
+
+nav a:hover {
+    background-color: #555;
+}
+
+.title-image {
+    text-align: center; 
+    margin: 0 auto;
+}
+
+.img-title {
+    max-width: 100%; 
+    height: auto;
+    display: block;
+    margin: 0 auto; 
+}
+
+
+
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.section {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.sidebar {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Grid de discografía */
+.discografia-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+
+
+
+
+.disco {
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.disco img {
+    max-width: 100%; 
+    height: auto;    
+    border-radius: 8px;
+    object-fit: cover;  Ajusta el contenido si es necesario
+    /*object-fit: scale-down*/
+}
+
+.disco a {
+    display: block;
+    margin-top: 10px;
+    color: #0073e6;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.disco a:hover {
+    color: #005bb5;
+}
+
+
+/* --- Footer --- */
+footer {
+    background-color: #3d3d3d;
+    color: #fff;
+    text-align: center;
+    padding: 15px 10px; /* Reduce el padding en móviles */
+    margin-top: 20px;
+    width: 100%; /* Asegura que ocupe todo el ancho */
+}
+
+footer p {
+    margin-bottom: 10px; /* Ajusta el espacio entre los elementos */
+}
+
+.footer-legend {
+    font-size: 14px; /* Reduce el tamaño de la leyenda en pantallas pequeñas */
+}
+
+.social-icons {
+    margin: 10px 0;
+}
+
+.social-icons a {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.social-icons img {
+    width: 24px; /* Ajusta el tamaño de los íconos en móviles */
+    height: 24px;
+}
+
+
+/* --- Responsividad --- */
+
+/* Estilo para pantallas grandes (PC) */
+@media (min-width: 1200px) {
+    .flex-container {
+        display: flex;
+    }
+
+    .section {
+        flex-basis: 70%;
+    }
+
+    .sidebar {
+        flex-basis: 28%;
+    }
+
+    .title-image {
+        margin-bottom: 20px;
+    }
+}
+
+/* Estilo para tablets (768px - 1199px) */
+@media (min-width: 768px) and (max-width: 1199px) {
+    .flex-container {
+        flex-direction: column;
+    }
+
+    .section, .sidebar {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    nav ul {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .title-image {
+        padding: 10px;
+    }
+
+    .discografia-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 columnas en tablet */
+    }
+    .disco img {
+        max-width: 90%; /* Ajustar el tamaño de la imagen en tablet */
+    }
+}
+
+/* Estilo para móviles (menor a 768px) */
+@media (max-width: 767px) {
+    /* Header y Carrusel */
+    header {
+        width: 100%;
+    }
+
+    .carousel-inner img {
+        max-height: 250px; /* Reducimos el tamaño en móviles */
+    }
+
+    /* Nav */
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    /* Footer */
+    footer {
+        padding: 10px;
+    }
+
+    .social-icons img {
+        width: 24px;
+        height: 24px;
+    }
+
+    .footer-legend {
+        font-size: 12px;
+    }
+
+    /* Main Sections */
+    .flex-container {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .section, .sidebar {
+        width: 100%; 
+        margin-bottom: 20px;
+    }
+
+    .title-image {
+        padding: 5px;
+    }
+
+    .discografia-grid {
+        grid-template-columns: 1fr; 
+    }
+
+    .disco img {
+        max-width: 80%; 
+        margin: 0 auto; 
+    }
+}
+
+/* Historia*/
+
+.historia {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: 'Ubuntu', sans-serif;
+  }
+  
+  
+  .historia h3 {
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+ 
+  .historia p {
+    line-height: 1.5;
+    color: #666;
+  }
+  
+  
+  .historia blockquote {
+    font-style: italic;
+    border-left: 5px solid #ccc;
+    padding-left: 10px;
+    margin: 20px 0;
+  }
+
+
